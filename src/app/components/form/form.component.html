@@ -1,0 +1,24 @@
+<form action="" class="form">
+  <div class="form-icon-hour">
+    <img src="../../../assets/images/icon-hour.png" alt="Horário">
+    <span>Horário</span>
+  </div>
+  <p class="period-text">Qual período quer treinar?</p>
+  <div class="radio-wrapper">
+    <div *ngFor="let hour of hoursRadio" class="radio-hours">
+      <input type="radio" name="{{ hour.name }}" value="{{ hour.name }}" />
+      <label for="morning">{{ hour.label }}</label>
+      <span>{{ hour.start }} às {{ hour.end }}</span>
+    </div>
+  </div>
+  <div class="checkbox-wrapper">
+    <input type="checkbox" name="show-closed" />
+    <label for="show-closed">Exibir unidades fechadas</label>
+    <p>Resultados encontradas: <span>0</span></p>
+  </div>
+
+  <div class="button-wrapper">
+    <button class="primary-btn">ENCONTRAR UNIDADE</button>
+    <button class="secondary-btn">LIMPAR</button>
+  </div>
+</form>
